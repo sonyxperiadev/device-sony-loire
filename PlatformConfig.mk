@@ -81,6 +81,9 @@ NFC_NXP_CHIP_TYPE := PN547C2
 # Disable Dexpreopt
 WITH_DEXPREOPT := false
 
+# Props for hotplugging
+TARGET_SYSTEM_PROP += device/sony/loire/system.prop
+
 # SELinux
 BOARD_SEPOLICY_DIRS += device/sony/loire/sepolicy
 
