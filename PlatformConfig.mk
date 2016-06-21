@@ -85,6 +85,6 @@ WITH_DEXPREOPT := false
 TARGET_SYSTEM_PROP += device/sony/loire/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/sony/loire/sepolicy
+include device/sony/sepolicy/sepolicy.mk
 
 include device/sony/common/CommonConfig.mk
