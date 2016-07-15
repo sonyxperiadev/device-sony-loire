@@ -34,8 +34,6 @@ on boot
     # Tap to wake
     chown system system /sys/devices/virtual/input/clearpad/wakeup_gesture
     chmod 0660 /sys/devices/virtual/input/clearpad/wakeup_gesture
-    chown system system /sys/devices/virtual/input/maxim_sti/gesture_wakeup
-    chmod 0660 /sys/devices/virtual/input/maxim_sti/gesture_wakeup
 
     # Glove mode
     chown system system /sys/devices/virtual/input/clearpad/glove
