@@ -70,7 +70,7 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/loire/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/sony/loire/bluetooth/vnd_generic.txt
+BOARD_CUSTOM_BT_CONFIG := device/sony/loire/bluetooth/vnd_generic.txt
 
 # RIL
 TARGET_PER_MGR_ENABLED := true
