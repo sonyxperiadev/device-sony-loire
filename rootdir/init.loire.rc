@@ -57,7 +57,7 @@ on boot
     write /dev/cpuset/system-background/cpus 0-3
 
 # OSS WLAN and BT MAC setup
-service macaddrsetup /system/bin/macaddrsetup
+service macaddrsetup /system/bin/macaddrsetup /sys/devices/platform/bcmdhd_wlan/macaddr
     user root
     disabled
     oneshot
