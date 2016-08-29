@@ -17,7 +17,24 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-/* #define BTA_AV_CO_CP_SCMS_T   TRUE */
-#define SDP_AVRCP_1_5   FALSE
+#include <cutils/properties.h>
+#include <string.h>
+
+inline const char* getBTDefaultName()
+{
+    char device[PROPERTY_VALUE_MAX];
+    property_get("ro.boot.hardware", device, "");
+
+    if (!strcmp("suzu", device)) {
+        return "Xperia X";
+    }
+
+    return "Xperia";
+}
+
+#define BTM_DEF_LOCAL_NAME getBTDefaultName()
+#define BTM_WBS_INCLUDED TRUE
+#define BTIF_HF_WBS_PREFERRED TRUE
+#define BLE_VND_INCLUDED TRUE
 
 #endif
