@@ -12,4 +12,4 @@
 /dev/block/bootdevice/by-name/persist      /persist     ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic wait,notrim
 
 /devices/soc.0/7864900.sdhci/mmc_host/mmc*  auto         auto    nosuid,nodev                                      voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/soc.0/*/xhci-hcd.0.auto            auto         auto    nosuid,nodev                                      voldmanaged=usb:auto
+/devices/platform/msm_hsusb_host/usb*       auto         auto    nosuid,nodev                                      voldmanaged=usb:auto
