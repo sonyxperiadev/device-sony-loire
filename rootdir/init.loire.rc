@@ -116,6 +116,12 @@ service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/etc/msm_irqb
     group root
     writepid /dev/cpuset/system-background/tasks
 
+# brcm-uim-sysfs (BT/FM/ANT+)
+service uim /system/bin/brcm-uim-sysfs
+    class late_start
+    user root
+    group bluetooth net_bt_admin net_bt
+
 on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
     start macaddrsetup
