@@ -129,3 +129,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.tilt_detector=false \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
+
+## 8MP Switch for ES
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.8mp.config=true
