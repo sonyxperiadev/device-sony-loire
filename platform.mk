@@ -96,6 +96,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609
 
+# Audio HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    voice.playback.conc.disabled=true \
+    voice.record.conc.disabled=false \
+    voice.voip.conc.disabled=true \
+    voice.conc.fallbackpath=deep-buffer
+
 # aDSP sensors
 ## max rate
 PRODUCT_PROPERTY_OVERRIDES += \
