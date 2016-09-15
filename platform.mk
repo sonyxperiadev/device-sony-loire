@@ -129,3 +129,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.tilt_detector=false \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
+
+# Optimal dex2oat threads for faster app installation
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.dex2oat_thread_count=4 \
+    dalvik.vm.dex2oat-threads=4
