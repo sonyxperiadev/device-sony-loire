@@ -8,7 +8,7 @@ rqbalance.low.balance_level=80
 rqbalance.low.up_threshold=100 200 300 800 900 4294967295
 rqbalance.low.down_threshold=0 75 175 275 775 875
 
-cpuquiet.normal.min_cpus=4
+cpuquiet.normal.min_cpus=2
 cpuquiet.normal.max_cpus=6
 rqbalance.normal.balance_level=40
 rqbalance.normal.up_threshold=50 100 150 400 450 4294967295
