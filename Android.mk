@@ -1,4 +1,4 @@
-ifeq ($(filter-out suzu,$(TARGET_DEVICE)),)
+ifeq ($(filter-out kugo suzu,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 

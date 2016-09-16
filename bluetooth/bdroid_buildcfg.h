@@ -30,6 +30,10 @@ static inline const char* getBTDefaultName()
         return "Xperia X";
     }
 
+    if (!strcmp("kugo", device)) {
+        return "Xperia X Compact";
+    }
+
     return "Xperia";
 }
 
