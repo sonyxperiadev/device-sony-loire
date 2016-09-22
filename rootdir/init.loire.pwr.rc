@@ -131,6 +131,17 @@ on boot
     write /proc/sys/kernel/sched_freq_inc_notify 50000
     write /proc/sys/kernel/sched_freq_dec_notify 50000
 
+    # Enable core control
+    insmod /system/lib/modules/core_ctl.ko
+
+    #for 8956
+    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 2
+    write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 2
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 68
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 40
+    write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms 100
+    write /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster 1
+
     # re-enable thermal
     write /sys/module/msm_thermal/core_control/enabled 1
 
@@ -166,3 +177,7 @@ on boot
 
     chmod 0660 /sys/module/lowmemorykiller/parameters/minfree
     write /sys/module/lowmemorykiller/parameters/minfree "14746,18432,22118,25805,40000,55000"
+
+    # Post-setup services
+    rm /data/system/perfd/default_values
+    start perfd
