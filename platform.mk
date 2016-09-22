@@ -143,3 +143,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ## 8MP Switch for ES
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.8mp.config=true
+
+# Some functional extras
+$(call inherit-product-if-exists, vendor/qcom/proprietary/proprietary.mk)
