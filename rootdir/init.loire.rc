@@ -50,6 +50,16 @@ on boot
     # Socket location for RIDL
     mkdir /dev/socket/RIDL 2770 system system
 
+    # Required for fingerprint
+    chown system system /sys/bus/spi/devices/spi0.1/clk_enable
+    chmod 0660 /sys/bus/spi/devices/spi0.1/clk_enable
+    chown system system /sys/devices/soc.0/fpc1145_device/spi_prepare
+    chmod 0660 /sys/devices/soc.0/fpc1145_device/spi_prepare
+    chown system system /sys/devices/soc.0/fpc1145_device/wakeup_enable
+    chmod 0660 /sys/devices/soc.0/fpc1145_device/wakeup_enable
+    chown system system /sys/devices/soc.0/fpc1145_device/irq
+    chmod 0660 /sys/devices/soc.0/fpc1145_device/irq
+
     # Update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-5
     write /dev/cpuset/foreground/boost/cpus 4-5
