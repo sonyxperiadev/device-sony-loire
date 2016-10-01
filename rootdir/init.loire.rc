@@ -60,17 +60,29 @@ on boot
     chown system system /sys/devices/soc.0/fpc1145_device/irq
     chmod 0660 /sys/devices/soc.0/fpc1145_device/irq
 
+    # add a cpuset for the camera daemon
+    # we want all the little cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0
+    write /dev/cpuset/camera-daemon/mems 0
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+
     # Update foreground cpuset now that processors are up
-    write /dev/cpuset/foreground/cpus 0-5
+    # reserve CPU 3 for the top app and camera daemon
+    write /dev/cpuset/foreground/cpus 0-2,4-5
     write /dev/cpuset/foreground/boost/cpus 4-5
     write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/camera-daemon/cpus 0-3
 
 # OSS WLAN and BT MAC setup
 service macaddrsetup /system/bin/macaddrsetup
     user root
     disabled
     oneshot
+    writepid /dev/cpuset/system-background/tasks
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
@@ -105,6 +117,7 @@ service per_mgr /system/vendor/bin/pm-service
     class core
     user system
     group system net_raw
+    writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
 service per_proxy /system/vendor/bin/pm-proxy
@@ -112,12 +125,14 @@ service per_proxy /system/vendor/bin/pm-proxy
     user system
     group system net_raw
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 # Fingerprint service
 service fingerprintd /system/bin/fingerprintd
     class late_start
     user system
     group input
+    writepid /dev/cpuset/system-background/tasks
 
 service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
@@ -131,6 +146,7 @@ service uim /system/bin/brcm-uim-sysfs
     class late_start
     user root
     group bluetooth net_bt_admin net_bt
+    writepid /dev/cpuset/system-background/tasks
 
 on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
