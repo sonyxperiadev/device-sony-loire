@@ -80,6 +80,19 @@ on boot
     write /dev/cpuset/top-app/cpus 0-5
     write /dev/cpuset/camera-daemon/cpus 0-3
 
+# msm specific files that need to be created on /data
+on post-fs-data
+    #Create PERFD deamon related dirs
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
+    mkdir /data/system/perfd 0770 root system
+    chmod 2770 /data/system/perfd
+
+service perfd /system/vendor/bin/perfd
+   class main
+   user root
+   disabled
+
 # OSS WLAN and BT MAC setup
 service macaddrsetup /system/bin/macaddrsetup
     user root
