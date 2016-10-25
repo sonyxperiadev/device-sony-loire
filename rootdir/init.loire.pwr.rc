@@ -81,10 +81,10 @@ on boot
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # disable thermal bcl hotplug to switch governor
-    write /sys/devices/soc.0/qcom,bcl.56/mode "disable"
-    write /sys/devices/soc.0/qcom,bcl.56/hotplug_mask 0
-    write /sys/devices/soc.0/qcom,bcl.56/hotplug_soc_mask 0
-    write /sys/devices/soc.0/qcom,bcl.56/mode "enable"
+    write /sys/devices/soc/qcom,bcl.56/mode "disable"
+    write /sys/devices/soc/qcom,bcl.56/hotplug_mask 0
+    write /sys/devices/soc/qcom,bcl.56/hotplug_soc_mask 0
+    write /sys/devices/soc/qcom,bcl.56/mode "enable"
 
     # enable governor for power cluster
     write /sys/devices/system/cpu/cpu0/online 1
@@ -150,10 +150,10 @@ on boot
     write /sys/module/msm_thermal/core_control/enabled 1
 
     # re-enable BCL hotplug
-    write /sys/devices/soc.0/qcom,bcl.56/mode "disable"
-    write /sys/devices/soc.0/qcom,bcl.56/hotplug_mask 48
-    write /sys/devices/soc.0/qcom,bcl.56/hotplug_soc_mask 48
-    write /sys/devices/soc.0/qcom,bcl.56/mode "enable"
+    write /sys/devices/soc/qcom,bcl.56/mode "disable"
+    write /sys/devices/soc/qcom,bcl.56/hotplug_mask 48
+    write /sys/devices/soc/qcom,bcl.56/hotplug_soc_mask 48
+    write /sys/devices/soc/qcom,bcl.56/mode "enable"
 
     # Enable timer migration to little cluster
     write /proc/sys/kernel/power_aware_timer_migration 1

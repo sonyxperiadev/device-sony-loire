@@ -123,10 +123,10 @@
 /sys/devices/f9928000.i2c/i2c-6/6-0028  send_cmd    0200 nfc nfc
 
 # LED
-/sys/devices/soc.0/03-qcom,leds-d800/leds/wled:backlight max_brightness 0664 system system
-/sys/devices/soc.0/03-qcom,leds-d800/leds/wled:backlight brightness     0664 system system
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0042/leds/led:* max_brightness   0664 system system
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0042/leds/led:* brightness       0664 system system
+/sys/devices/soc/03-qcom,leds-d800/leds/wled:backlight max_brightness 0664 system system
+/sys/devices/soc/03-qcom,leds-d800/leds/wled:backlight brightness     0664 system system
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* max_brightness   0664 system system
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* brightness       0664 system system
 /sys/class/leds/lcd-backlight/max_brightness                            0644 root system
 /sys/class/leds/lcd-backlight/brightness                                0664 system system
 
