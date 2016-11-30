@@ -156,7 +156,6 @@ service uim /system/bin/brcm-uim-sysfs
     group bluetooth net_bt_admin net_bt
     seclabel u:r:uim:s0
     writepid /dev/cpuset/system-background/tasks
-    disabled
 
 on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
