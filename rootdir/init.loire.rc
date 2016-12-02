@@ -20,10 +20,12 @@ on fs
     symlink /dev/block/platform/soc.0/7824900.sdhci /dev/block/bootdevice
 
     mount_all ./fstab.loire
-    swapon_all ./fstab.loire
 
     restorecon_recursive /persist
     write /sys/kernel/boot_adsp/boot 1
+
+on post-fs
+    swapon_all ./fstab.loire
 
 on boot
     # Bluetooth
