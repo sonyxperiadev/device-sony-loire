@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Platform path
+PLATFORM_COMMON_PATH := device/sony/loire
+
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 SOMC_PLATFORM := loire
 
-SONY_ROOT := device/sony/loire/rootdir
+SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -55,7 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/loire/overlay
+    $(PLATFORM_COMMON_PATH)/overlay
 
 # Platform Init
 PRODUCT_PACKAGES += \
