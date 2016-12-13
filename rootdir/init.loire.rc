@@ -26,8 +26,8 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
 
 on boot
-    # Bluetooth
-    chown system system /sys/devices/soc/bcmdhd_wlan.114/macaddr
+    # WLAN and BT MAC
+    chown system system /sys/devices/soc/soc:bcmdhd_wlan/macaddr
 
     # Cover mode
     chown system system /sys/devices/virtual/input/clearpad/cover_mode_enabled
@@ -84,7 +84,7 @@ on boot
     write /dev/cpuset/camera-daemon/cpus 0-3
 
 # OSS WLAN and BT MAC setup
-service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc/bcmdhd_wlan.114/macaddr
+service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc/soc:bcmdhd_wlan/macaddr
     class core
     user system
     group system bluetooth
