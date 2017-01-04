@@ -64,27 +64,19 @@ on boot
     write /proc/sys/kernel/sched_window_stats_policy 5
     write /proc/sys/kernel/sched_ravg_hist_size 5
 
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run 3
-
-    write /sys/class/devfreq/qcom,mincpubw.50/governor "cpufreq"
-    write /sys/class/devfreq/qcom,cpubw.49/governor "bw_hwmon"
-    write /sys/class/devfreq/qcom,cpubw.49/bw_hwmon/io_percent 20
-    write /sys/class/devfreq/qcom,cpubw.49/bw_hwmon/guard_band_mbps 30
-    write /sys/class/devfreq/qcom,gpubw.35/bw_hwmon/io_percent 40
+    write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
+    write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 20
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/guard_band_mbps 30
 
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # disable thermal bcl hotplug to switch governor
-    write /sys/devices/soc/qcom,bcl.56/mode "disable"
-    write /sys/devices/soc/qcom,bcl.56/hotplug_mask 0
-    write /sys/devices/soc/qcom,bcl.56/hotplug_soc_mask 0
-    write /sys/devices/soc/qcom,bcl.56/mode "enable"
+    write /sys/devices/soc/soc:qcom,bcl/mode "disable"
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 0
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 0
+    write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # enable governor for power cluster
     write /sys/devices/system/cpu/cpu0/online 1
@@ -114,13 +106,7 @@ on boot
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "85 1382400:90 1747200:80"
 
     # HMP Task packing settings for 8956
-    write /proc/sys/kernel/sched_small_task 30
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 20
+    write /proc/sys/kernel/sched_small_wakee_task_load 30
 
     write /proc/sys/kernel/sched_boost 0
 
@@ -150,27 +136,17 @@ on boot
     write /sys/module/msm_thermal/core_control/enabled 1
 
     # re-enable BCL hotplug
-    write /sys/devices/soc/qcom,bcl.56/mode "disable"
-    write /sys/devices/soc/qcom,bcl.56/hotplug_mask 48
-    write /sys/devices/soc/qcom,bcl.56/hotplug_soc_mask 48
-    write /sys/devices/soc/qcom,bcl.56/mode "enable"
-
-    # Enable timer migration to little cluster
-    write /proc/sys/kernel/power_aware_timer_migration 1
-
-    # disallow upmigrate for cgroup's tasks
-    write /dev/cpuctl/bg_non_interactive/cpu.upmigrate_discourage 1
+    write /sys/devices/soc/soc:qcom,bcl/mode "disable"
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 48
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 48
+    write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     #enable sched colocation and colocation inheritance
-    write /proc/sys/kernel/sched_grp_upmigrate 130
-    write /proc/sys/kernel/sched_grp_downmigrate 110
+    write /proc/sys/kernel/sched_upmigrate 130
+    write /proc/sys/kernel/sched_downmigrate 110
     write /proc/sys/kernel/sched_enable_thread_grouping 1
 
     # set cpu_boost parameters
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1305600"
     write /sys/module/cpu_boost/parameters/input_boost_ms "40"
     write /proc/sys/kernel/sched_upmigrate_min_nice 9
-
-    # set (super) packing parameters
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_freq 1017600
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_freq 0
