@@ -115,11 +115,11 @@
 
 # NFC
 /dev/pn54x                                               0660 nfc nfc
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  init_deinit 0200 nfc nfc
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  set_pwr     0200 nfc nfc
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  res_ready   0400 nfc nfc
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  recv_rsp    0600 nfc nfc
-/sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  send_cmd    0200 nfc nfc
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  init_deinit   0200 nfc nfc
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  set_pwr       0200 nfc nfc
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  res_ready     0400 nfc nfc
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  recv_rsp      0600 nfc nfc
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  send_cmd      0200 nfc nfc
 
 # LED
 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight max_brightness 0664 system system
