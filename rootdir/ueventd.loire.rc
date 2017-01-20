@@ -126,8 +126,10 @@
 /sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight brightness     0664 system system
 /sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* max_brightness   0664 system system
 /sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* brightness       0664 system system
-/sys/class/leds/lcd-backlight/max_brightness                            0644 root system
-/sys/class/leds/lcd-backlight/brightness                                0664 system system
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* blink            0664 system system
+/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/pattern_run                 0664 system system
+/sys/class/leds/lcd-backlight/max_brightness                          0644 root system
+/sys/class/leds/lcd-backlight/brightness                              0664 system system
 
 # Thermanager
 /sys/module/msm_performance/parameters/cpu_max_freq   0664 system system
