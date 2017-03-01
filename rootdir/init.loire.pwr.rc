@@ -150,10 +150,3 @@ on boot
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1305600"
     write /sys/module/cpu_boost/parameters/input_boost_ms "40"
     write /proc/sys/kernel/sched_upmigrate_min_nice 9
-
-    # Qualcomm are setting these depending on ro.product.name!
-    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
-
-    chmod 0660 /sys/module/lowmemorykiller/parameters/minfree
-    write /sys/module/lowmemorykiller/parameters/minfree "14746,18432,22118,25805,40000,55000"
