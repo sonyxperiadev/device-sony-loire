@@ -40,7 +40,6 @@ static inline const char* getBTDefaultName()
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
 #endif // OS_GENERIC
 
-#define HCILP_INCLUDED FALSE
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
 #define BLE_VND_INCLUDED TRUE
