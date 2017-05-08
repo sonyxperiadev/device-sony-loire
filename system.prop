@@ -13,3 +13,9 @@ cpuquiet.normal.max_cpus=6
 rqbalance.normal.balance_level=40
 rqbalance.normal.up_threshold=50 100 150 400 450 4294967295
 rqbalance.normal.down_threshold=0 25 75 125 375 425
+
+#
+# camera
+#
+
+vidc.enc.dcvs.extra-buff-count=2
