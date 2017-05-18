@@ -47,6 +47,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
+# RQBalance-PowerHAL configuration
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
+
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
