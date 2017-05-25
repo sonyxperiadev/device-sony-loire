@@ -169,3 +169,9 @@ on property:init.svc.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop per_proxy
+
+on property:sys.backlight_on=0
+    write /sys/devices/virtual/input/clearpad/force_sleep 2
+
+on property:sys.backlight_on=1
+    write /sys/devices/virtual/input/clearpad/force_sleep 0
