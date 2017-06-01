@@ -15,6 +15,7 @@
 # Platform path
 PLATFORM_COMMON_PATH := device/sony/loire
 
+PRODUCT_PLATFORM := loire
 TARGET_BOARD_PLATFORM := msm8952
 TARGET_KERNEL_VERSION := 4.4
 
