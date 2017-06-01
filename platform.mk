@@ -103,6 +103,12 @@ PRODUCT_PACKAGES += \
     brcm-uim-sysfs \
     libfmjni
 
+# Audio
+## FIXME ## change to fluence when is fixed
+# Fluencetype can be "fluence" or "fluencepro" or "none"
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=none \
+
 # RILD
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
