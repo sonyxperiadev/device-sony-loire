@@ -150,7 +150,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0 \
     media.stagefright.less-secure=true \
     media.stagefright.legacyencoder=true
-
-## 8MP Switch for ES
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.8mp.config=true
