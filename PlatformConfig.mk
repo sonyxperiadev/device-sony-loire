@@ -88,4 +88,7 @@ BOARD_HAVE_BCM_FM := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
 
+# FPC version select
+TARGET_FPC_VERSION := N
+
 include device/sony/common/CommonConfig.mk
