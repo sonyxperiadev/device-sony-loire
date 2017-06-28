@@ -1,6 +1,8 @@
+import init.common.usb.rc
+
 on fs
     symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
+    setprop sys.usb.controller 86000c8.android_usb
 
 on boot
-    write /sys/class/android_usb/android0/idVendor 0FCE
-    write /sys/class/android_usb/android0/idProduct 6${ro.usb.pid_suffix}
+    setprop sys.usb.config adb
