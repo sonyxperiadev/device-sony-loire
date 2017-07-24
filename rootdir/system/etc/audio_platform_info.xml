@@ -27,7 +27,14 @@
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
     <acdb_ids>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="135"/>
+	<device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
+
+        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="4"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11" />
+        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="801"/>
+
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
     </acdb_ids>
     <bit_width_configs>
         <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
@@ -39,12 +46,24 @@
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="TERT_MI2S" codec_type="internal"/>
     </interface_names>
     <pcm_ids>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD3" type="out" id="29"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD4" type="out" id="30"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD5" type="out" id="31"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD6" type="out" id="32"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD7" type="out" id="33"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD8" type="out" id="34"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD9" type="out" id="35"/>
         <usecase name="USECASE_VOICEMMODE1_CALL" type="in" id="35"/>
         <usecase name="USECASE_VOICEMMODE1_CALL" type="out" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="36"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="36"/>
+        <usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="38"/>
     </pcm_ids>
-    <tz_names>
-        <device name="SND_DEVICE_OUT_SPEAKER" spkr_1_tz_name="wsa881x.0f" spkr_2_tz_name=""/>
-    </tz_names>
+    <config_params>
+        <param key="spkr_1_tz_name" value="wsatz.11"/>
+        <param key="spkr_2_tz_name" value="wsatz.12"/>
+        <!-- In the below value string, first parameter indicates size -->
+        <!-- followed by perf lock options                             -->
+        <param key="perf_lock_opts" value="4, 0x101, 0x704, 0x20F, 0x1E01"/>
+    </config_params>
 </audio_platform_info>
