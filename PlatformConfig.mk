@@ -86,6 +86,9 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
+# Camera
+CAMERA_DAEMON_NOT_PRESENT := true
+
 # FPC version select
 TARGET_FPC_VERSION := N
 
