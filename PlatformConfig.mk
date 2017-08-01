@@ -87,6 +87,9 @@ BOARD_HAVE_BCM_FM := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
+# Camera
+CAMERA_DAEMON_NOT_PRESENT := true
+
 # FPC version select
 TARGET_FPC_VERSION := N
 
