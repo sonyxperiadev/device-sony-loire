@@ -25,7 +25,7 @@ SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    $(SONY_ROOT)/system/etc/aanc_tuning_mixer_wcd9335.txt:system/etc/aanc_tuning_mixer_wcd9335.txt \
     $(SONY_ROOT)/system/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 # Media
