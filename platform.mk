@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# Broadcom BT
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
 # IDC
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/idc/clearpad.idc:system/usr/idc/clearpad.idc
@@ -93,12 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8952
 
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    brcm-uim-sysfs \
-    libfmjni
-
 # OpenGLES Nougat version
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
@@ -142,7 +132,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0 \
     media.stagefright.less-secure=true \
     media.stagefright.legacyencoder=true
-
-# FM Radio Dep
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rfkilldisabled=1
