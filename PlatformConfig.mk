@@ -80,10 +80,6 @@ TARGET_PER_MGR_ENABLED := true
 NXP_CHIP_TYPE := PN547C2
 NXP_CHIP_FW_TYPE := PN547C2
 
-# FM definitions for Broadcom solution
-BOARD_HAVE_ALTERNATE_FM := true
-BOARD_HAVE_BCM_FM := true
-
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 

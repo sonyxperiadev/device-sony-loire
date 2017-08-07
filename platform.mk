@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# Broadcom BT
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
 # IDC
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/idc/clearpad.idc:system/usr/idc/clearpad.idc
