@@ -17,7 +17,6 @@ PLATFORM_COMMON_PATH := device/sony/loire
 
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 SOMC_PLATFORM := loire
 
@@ -49,6 +48,11 @@ PRODUCT_COPY_FILES += \
 # RQBalance-PowerHAL configuration
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
+
+# WLAN
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(SONY_ROOT)/system/etc/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
