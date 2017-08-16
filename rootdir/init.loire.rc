@@ -141,6 +141,14 @@ service per_proxy /system/vendor/bin/pm-proxy
     disabled
     writepid /dev/cpuset/system-background/tasks
 
+# QCOM prop
+service qmuxd /system/vendor/bin/qmuxd
+    class main
+    user radio
+    group radio audio bluetooth wakelock gps nfc diag
+    disabled
+    writepid /dev/cpuset/system-background/tasks
+
 # Fingerprint service
 service fingerprintd /system/bin/fingerprintd
     class late_start
