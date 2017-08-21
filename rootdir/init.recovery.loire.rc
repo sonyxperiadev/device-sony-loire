@@ -2,7 +2,6 @@ import init.common.usb.rc
 
 on init
     symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
-    setprop sys.usb.controller msm_hsusb
 
 on boot
     setprop sys.usb.config adb
