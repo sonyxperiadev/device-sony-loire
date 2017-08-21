@@ -127,3 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.als_scale=1 \
     ro.qti.sensors.wu=true
+
+# USB controller setup
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.controller=msm_hsusb
