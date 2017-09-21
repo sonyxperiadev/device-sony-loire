@@ -27,18 +27,21 @@
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
     <acdb_ids>
-	<device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <!-- Custom mapping starts here -->
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
-
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11" />
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="801"/>
-
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
+        <!-- Custom mapping ends here -->
     </acdb_ids>
     <bit_width_configs>
         <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
     </bit_width_configs>
+    <config_params>
+        <param key="input_mic_max_count" value="4"/>
+    </config_params>
     <interface_names>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="SLIMBUS_0" codec_type="external"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="SLIMBUS_0" codec_type="external"/>
@@ -50,13 +53,12 @@
         <usecase name="USECASE_VOICEMMODE1_CALL" type="out" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="36"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="36"/>
-        <usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="38"/>
+        <usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="37"/>
     </pcm_ids>
-    <config_params>
-        <param key="spkr_1_tz_name" value="wsatz.11"/>
-        <param key="spkr_2_tz_name" value="wsatz.12"/>
-        <!-- In the below value string, first parameter indicates size -->
-        <!-- followed by perf lock options                             -->
-        <param key="perf_lock_opts" value="4, 0x101, 0x704, 0x20F, 0x1E01"/>
-    </config_params>
+    <tz_names>
+        <device name="SND_DEVICE_OUT_SPEAKER" spkr_1_tz_name="wsatz.11" spkr_2_tz_name="wsatz.12"/>
+    </tz_names>
+    <native_configs>
+        <feature name="NATIVE_AUDIO_44.1" codec_support="1"/>
+    </native_configs>
 </audio_platform_info>
