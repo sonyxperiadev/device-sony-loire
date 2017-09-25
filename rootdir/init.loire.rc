@@ -109,37 +109,9 @@ service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-# QCOM prop
-service per_mgr /system/vendor/bin/pm-service
-    class core
-    user system
-    group system net_raw
-    writepid /dev/cpuset/system-background/tasks
-
-# QCOM prop
-service per_proxy /system/vendor/bin/pm-proxy
-    class core
-    user system
-    group system net_raw
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/etc/msm_irqbalance.conf
-    socket msm_irqbalance seqpacket 660 root system
-    class core
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
-
 on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
     start macaddrsetup
 
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
-
-on property:init.svc.per_mgr=running
-    start per_proxy
-
-on property:sys.shutdown.requested=*
-    stop per_proxy
