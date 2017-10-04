@@ -132,7 +132,7 @@ service fingerprintd /system/bin/fingerprintd
     writepid /dev/cpuset/system-background/tasks
 
 # brcm-uim-sysfs (BT/FM/ANT+)
-service uim /system/bin/brcm-uim-sysfs
+service uim /system/vendor/bin/brcm-uim-sysfs
     class late_start
     user root
     group bluetooth net_bt_admin net_bt
