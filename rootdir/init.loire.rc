@@ -147,7 +147,7 @@ on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
 # Camera
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /odm/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
