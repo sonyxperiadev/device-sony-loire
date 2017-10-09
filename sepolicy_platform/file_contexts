@@ -1,0 +1,19 @@
+###################################
+# System files
+#
+/odm/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
+/odm/bin/irsc_util                    u:object_r:irsc_util_exec:s0
+/odm/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
+/odm/bin/mm-qcamera-daemon            u:object_r:mm-qcamerad_exec:s0
+/odm/bin/msm_irqbalance               u:object_r:msm_irqbalanced_exec:s0
+/odm/bin/netmgrd                      u:object_r:netmgrd_exec:s0
+/odm/bin/pm-service                   u:object_r:per_mgr_exec:s0
+/odm/bin/pm-proxy                     u:object_r:per_mgr_exec:s0
+/odm/bin/qmuxd                        u:object_r:qmuxd_exec:s0
+/odm/bin/qseecomd                     u:object_r:tee_exec:s0
+/odm/bin/rmt_storage                  u:object_r:rmt_storage_exec:s0
+/odm/bin/sct_service                  u:object_r:sct_exec:s0
+/odm/bin/sensors.qcom                 u:object_r:sensors_exec:s0
+/odm/bin/tad_static                   u:object_r:tad_exec:s0
+/odm/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
+/odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
