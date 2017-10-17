@@ -138,6 +138,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.dec.downscalar_width=1920 \
     vidc.dec.downscalar_height=1088
 
+## Others
+PRODUCT_PROPERTY_OVERRIDES += \
+    vidc.enc.disable_bframes=1 \
+    vidc.enc.disable_pframes=1 \
+    vidc.disable.split.mode=1
+
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb
