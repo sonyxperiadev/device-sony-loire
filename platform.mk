@@ -128,6 +128,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.als_scale=1 \
     ro.qti.sensors.wu=true
 
+# VIDC configuration
+## Downscalar
+PRODUCT_PROPERTY_OVERRIDES += \
+    vidc.dec.enable.downscalar=1 \
+    vidc.dec.downscalar_width=1920 \
+    vidc.dec.downscalar_height=1088
+
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb
