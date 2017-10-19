@@ -17,9 +17,10 @@ import init.common.srv.rc
 import init.common.usb.rc
 import init.loire.pwr.rc
 
-on fs
+on init
     symlink /dev/block/platform/soc.0/7824900.sdhci /dev/block/bootdevice
 
+on fs
     mount_all ./fstab.loire
 
     restorecon_recursive /persist
