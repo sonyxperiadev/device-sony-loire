@@ -135,6 +135,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.tilt=false \
     ro.qti.sensors.tilt_detector=false \
     ro.qti.sensors.dpc=false \
+    ro.qti.sensors.als_scale=1 \
     ro.qti.sensors.wu=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
