@@ -48,4 +48,7 @@
 /dev/block/platform/soc/7824900\.sdhci/by-name/oem             u:object_r:system_block_device:s0
 /dev/block/bootdevice/by-name/oem                              u:object_r:system_block_device:s0
 
+/dev/block/platform/soc/7824900\.sdhci/by-name/rdimage         u:object_r:rdimage_block_device:s0
+/dev/block/bootdevice/by-name/rdimage                          u:object_r:rdimage_block_device:s0
+
 /dev/block/zram0                                               u:object_r:swap_block_device:s0
