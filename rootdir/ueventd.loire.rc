@@ -112,6 +112,9 @@
 /dev/ttyHS0                                         0660 bluetooth net_bt_stack
 /dev/ttyMSM0                                        0660 bluetooth net_bt_stack
 
+# Fingerprint sensor  device
+/dev/fingerprint         0664 system input
+
 # NFC
 /dev/pn54x                                               0660 nfc nfc
 /sys/devices/soc.0/7af6000.i2c/i2c-6/6-0028  init_deinit 0200 nfc nfc
