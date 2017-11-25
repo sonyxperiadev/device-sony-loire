@@ -114,3 +114,5 @@ service qcamerasvr /odm/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/camera-daemon/tasks
 
+on property:ro.boot.baseband=msm
+    enable qmuxd
