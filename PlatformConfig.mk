@@ -76,9 +76,6 @@ NXP_CHIP_FW_TYPE := PN547C2
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
-# Camera
-CAMERA_DAEMON_NOT_PRESENT := true
-
 # FPC version select
 TARGET_FPC_VERSION := N
 
