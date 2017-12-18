@@ -40,13 +40,6 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-
 TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/fstab.loire
 
 # Wi-Fi definitions for Broadcom solution
