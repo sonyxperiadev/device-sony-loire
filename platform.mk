@@ -30,9 +30,9 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(SONY_ROOT)/system/etc/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml
+    $(SONY_ROOT)/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(SONY_ROOT)/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(SONY_ROOT)/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -140,14 +140,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.disable_bframes=1 \
     vidc.enc.disable_pframes=1 \
     vidc.disable.split.mode=1
-    
+
 ## Avoid unsupported UBWC buffers on VENC
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable=1 \
     debug.gralloc.gfx_ubwc_disable_=1 \
     debug.gralloc.enable_fb_ubwc=0 \
     video.disable.ubwc=1
-    
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
