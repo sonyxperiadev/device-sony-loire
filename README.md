@@ -9,4 +9,4 @@ loire devices:
     Xperia X Compact ........Kugo
 
 Build instructions
-http://developer.sonymobile.com/knowledge-base/open-source/open-devices/aosp-build-instructions/
+https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
