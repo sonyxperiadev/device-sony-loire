@@ -34,9 +34,9 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(SONY_ROOT)/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-# IDC
+# Touch IDC
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/usr/idc/clearpad.idc:system/usr/idc/clearpad.idc
+    $(SONY_ROOT)/vendor/usr/idc/clearpad.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/clearpad.idc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
