@@ -72,6 +72,9 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 # FPC version select
 TARGET_FPC_VERSION := N
 
+# Legacy Keymaster
+TARGET_LEGACY_KEYMASTER := true
+
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
 
