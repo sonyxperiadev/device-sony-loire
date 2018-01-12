@@ -51,3 +51,6 @@ include $(BUILD_PREBUILT)
 
 $(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.loire fstab.$(TARGET_DEVICE) && popd > /dev/null)
 
+# device firmware
+$(shell mkdir -p $(PRODUCT_OUT)/odm/firmware)
+$(shell pushd $(PRODUCT_OUT)/system/etc > /dev/null && ln -s /odm/firmware firmware && popd > /dev/null)
