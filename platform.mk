@@ -149,3 +149,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb \
     sys.usb.rndis.func.name=rndis_bam
+
+# SF Latch Buffer
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1
