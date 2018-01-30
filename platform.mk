@@ -149,6 +149,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=0 \
     video.disable.ubwc=1
 
+# Use MSM8956 feature set for vidc encoders
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.msm8956hw=1
+
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb \
