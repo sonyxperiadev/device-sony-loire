@@ -138,10 +138,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.disable_pframes=1 \
     vidc.disable.split.mode=1
 
-# Disable Vulkan
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.graphics.vulkan.disable=true
-
 ## Avoid unsupported UBWC buffers on VENC
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable=1 \
