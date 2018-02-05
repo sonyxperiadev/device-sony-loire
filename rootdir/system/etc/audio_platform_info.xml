@@ -36,6 +36,9 @@
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="801"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="11"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6"/>
+        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="578"/>
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="577"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" acdb_id="579"/>
         <!-- Custom mapping ends here -->
     </acdb_ids>
     <bit_width_configs>
