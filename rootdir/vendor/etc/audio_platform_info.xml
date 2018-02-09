@@ -28,12 +28,18 @@
 <audio_platform_info>
     <acdb_ids>
         <!-- Custom mapping starts here -->
-        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11" />
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="801"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6"/>
+        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="578"/>
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="577"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" acdb_id="579"/>
+        <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" acdb_id="544"/>
         <!-- Custom mapping ends here -->
     </acdb_ids>
     <bit_width_configs>
