@@ -7,6 +7,7 @@ loire devices:
 
     Xperia X.................Suzu
     Xperia X Compact ........Kugo
+    Xperia Touch ............Blanc
 
 Build instructions
 https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
