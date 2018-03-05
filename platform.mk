@@ -86,10 +86,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8952
 
-# OpenGLES Nougat version
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610
-
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence
