@@ -10,23 +10,23 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := init.$(TARGET_DEVICE)
-LOCAL_SRC_FILES := init.loire.rc
+LOCAL_MODULE := init.loire
+LOCAL_SRC_FILES := vendor/etc/init/init.loire.rc
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_STEM := init.$(TARGET_DEVICE)
+LOCAL_MODULE_STEM := init.loire
 LOCAL_MODULE_SUFFIX := .rc
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := init.loire.pwr
-LOCAL_SRC_FILES := init.loire.pwr.rc
+LOCAL_SRC_FILES := vendor/etc/init/init.loire.pwr.rc
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_STEM := init.loire.pwr
 LOCAL_MODULE_SUFFIX := .rc
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
