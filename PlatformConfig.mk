@@ -43,6 +43,9 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 
+# Serial console
+#BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0x7af0000 androidboot.console=msm_serial_dm,0x7af0000
+
 TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.loire
 
 # Wi-Fi definitions for Broadcom solution
