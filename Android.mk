@@ -1,4 +1,4 @@
-ifeq (loire,$(PRODUCT_PLATFORM))
+ifeq (loire,$(TARGET_BOOTLOADER_BOARD_NAME))
 
 LOCAL_PATH := $(call my-dir)
 
