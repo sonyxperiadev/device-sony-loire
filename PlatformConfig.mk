@@ -84,4 +84,6 @@ TARGET_LEGACY_KEYMASTER := true
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+BOARD_ROOT_EXTRA_SYMLINKS := /system/vendor/lib/dsp:/dsp
+
 include device/sony/common/CommonConfig.mk
