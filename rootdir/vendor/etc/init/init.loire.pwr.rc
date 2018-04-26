@@ -56,7 +56,7 @@ on charger
     # Enable thermal
     write /sys/module/msm_thermal/core_control/enabled 1
 
-on boot
+on property:sys.boot_completed=1
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
 
