@@ -14,7 +14,6 @@
 
 on boot
     # WLAN and BT MAC
-    chown system system /sys/devices/soc/soc:bcmdhd_wlan/macaddr
     chown system system /sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
     chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
 
