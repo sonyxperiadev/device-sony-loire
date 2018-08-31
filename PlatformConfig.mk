@@ -75,9 +75,6 @@ NXP_CHIP_FW_TYPE := PN547C2
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
-# FPC version select
-TARGET_FPC_VERSION := N
-
 # Legacy Keymaster
 TARGET_LEGACY_KEYMASTER := true
 
