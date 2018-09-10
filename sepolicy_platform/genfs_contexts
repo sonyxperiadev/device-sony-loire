@@ -48,7 +48,7 @@ genfscon sysfs /devices/platform/soc/soc:fpc1145                                
 genfscon sysfs /devices/platform/soc/7af6000.i2c/i2c-6/6-0042/leds                                                             u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds    u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds u:object_r:sysfs_leds:s0
 
-genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,fg/power_supply/bms                              u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,fg/power_supply/bms/capacity                     u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,qpnp-smbcharger/power_supply/battery/capacity    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,fg/power_supply                        u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,qpnp-smbcharger/power_supply           u:object_r:sysfs_batteryinfo:s0
