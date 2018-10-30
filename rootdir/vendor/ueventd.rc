@@ -118,13 +118,6 @@
 
 # NFC
 /dev/pn54x                                               0660 nfc nfc
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  init_deinit   0200 nfc nfc
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  set_pwr       0200 nfc nfc
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  res_ready     0400 nfc nfc
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  recv_rsp      0600 nfc nfc
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0028  send_cmd      0200 nfc nfc
-
-# NFC - k4.9
 /sys/devices/platform/soc/7af6000.i2c/i2c-6/6-0028  init_deinit   0200 nfc nfc
 /sys/devices/platform/soc/7af6000.i2c/i2c-6/6-0028  set_pwr       0200 nfc nfc
 /sys/devices/platform/soc/7af6000.i2c/i2c-6/6-0028  res_ready     0400 nfc nfc
@@ -132,16 +125,6 @@
 /sys/devices/platform/soc/7af6000.i2c/i2c-6/6-0028  send_cmd      0200 nfc nfc
 
 # LED
-/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight max_brightness 0664 system system
-/sys/devices/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight brightness     0664 system system
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* max_brightness   0664 system system
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* brightness       0664 system system
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* blink            0664 system system
-/sys/devices/soc/7af6000.i2c/i2c-6/6-0042  pattern_run                0664 system system
-/sys/class/leds/lcd-backlight max_brightness                          0644 root system
-/sys/class/leds/lcd-backlight brightness                              0664 system system
-
-# LED - k4.9
 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight max_brightness 0664 system system
 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds/wled:backlight brightness     0664 system system
 /sys/devices/platform/soc/7af6000.i2c/i2c-6/6-0042/leds/led:* max_brightness   0664 system system
