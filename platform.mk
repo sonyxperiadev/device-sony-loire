@@ -86,6 +86,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8952 \
     memtrack.msm8952
 
+# BCM Bluetooth
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8952
