@@ -31,8 +31,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-
 BOARD_KERNEL_BASE        := 0x20000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -76,6 +74,9 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
 # Legacy Keymaster
 TARGET_LEGACY_KEYMASTER := true
+
+# Cache partititon
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
