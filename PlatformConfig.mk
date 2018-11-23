@@ -75,6 +75,9 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 # Legacy Keymaster
 TARGET_LEGACY_KEYMASTER := true
 
+# Display
+TARGET_USES_GRALLOC1 := true
+
 # Cache partititon
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
