@@ -17,6 +17,8 @@ genfscon sysfs /devices/platform/soc/soc:bcm43xx/rfkill/rfkill0/state           
 genfscon sysfs /devices/platform/soc/soc:bcmdhd_wlan/macaddr                     u:object_r:sysfs_addrsetup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1145                                 u:object_r:sysfs_fingerprint:s0
 
+genfscon sysfs /devices/platform/soc/7a24900.sdhci/mmc_host/mmc2/mmc2:0001/mmc2:0001:1/net                                     u:object_r:sysfs_net:s0
+
 genfscon sysfs /devices/platform/soc/7af6000.i2c/i2c-6/6-0042/leds                                                             u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds    u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
