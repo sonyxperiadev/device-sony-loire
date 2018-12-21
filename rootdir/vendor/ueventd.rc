@@ -99,6 +99,9 @@
 /dev/voice_svc            0660   system     audio
 /sys/devices/virtual/smdpkt/smdcntl* open_timeout 0664 radio  radio
 
+# the DIAG device node is not world writable/readable.
+/dev/diag                 0660   system     diag
+
 # UIO devices
 /dev/uio0                 0660   system     system
 /dev/uio1                 0660   system     system
