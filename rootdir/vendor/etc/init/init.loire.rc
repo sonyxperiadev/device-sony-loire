@@ -12,6 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# HACK
+# disable hwcomposer pre-emptively
+on early-boot
+    stop vendor.hwcomposer-2-1
+# start it only after surfaceflinger is running and actively waiting on hwc
+on property:init.svc.surfaceflinger=running
+    exec /system/bin/sleep 1s
+    start vendor.hwcomposer-2-1
+
 on boot
     # WLAN and BT MAC
     chown system system /sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
