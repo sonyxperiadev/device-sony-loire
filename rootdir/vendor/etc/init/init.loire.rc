@@ -52,7 +52,7 @@ on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
 on property:ro.boot.baseband=msm
-    enable qmuxd
+    enable vendor.qmuxd
 
 on property:sys.boot_completed=1
     # Runtime fs tuning for runtime performance
