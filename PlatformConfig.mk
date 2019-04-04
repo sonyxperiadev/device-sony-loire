@@ -43,19 +43,13 @@ BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 
 TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.loire
 
-# Wi-Fi definitions for Broadcom solution
-BOARD_WLAN_DEVICE           := bcmdhd
+# Wi-Fi definitions for Broadcom solution but using brcmfmac instead of bcmdhd kernel driver
+BOARD_WLAN_DEVICE           := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 BOARD_HOSTAPD_DRIVER        := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
-# define firmware paths if not using brcmfmac driver
-ifneq ($(WIFI_DRIVER_BUILT),brcmfmac)
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
-endif
+BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_qcwcn
 
 # BT definitions for Broadcom solution
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
