@@ -19,7 +19,6 @@ TARGET_LEGACY_KEYMASTER := true
 
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 SOMC_PLATFORM := loire
 SOMC_KERNEL_VERSION := 4.9
