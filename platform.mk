@@ -163,6 +163,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.msm8956hw=1
 
+# Skip loading libsdmextension.so in display hal
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.skip_extension_intf=1
+
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb \
