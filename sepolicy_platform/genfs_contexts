@@ -31,3 +31,5 @@ genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.q
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:bcl@4200/power_supply/fg_adc                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/7af6000.i2c/i2c-6/6-0025/power_supply/typec                                                                    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,qpnp-smbcharger/power_supply/usb       u:object_r:sysfs_batteryinfo:s0
+
+genfscon sysfs /devices/platform/soc/7824900.sdhci/mmc_host/mmc0/mmc0:0001                              u:object_r:sysfs_mmc:s0
