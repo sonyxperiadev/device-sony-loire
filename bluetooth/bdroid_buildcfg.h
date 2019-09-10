@@ -18,6 +18,12 @@
 #define _BDROID_BUILDCFG_H
 
 #if !defined(OS_GENERIC)
+#ifdef PROPERTY_VALUE_MAX
+#define PVAL_MAX_ALREADY_DEFINED
+#ifndef __CUTILS_PROPERTIES_H
+#undef PROPERTY_VALUE_MAX
+#endif
+#endif
 #include <cutils/properties.h>
 #include <string.h>
 
@@ -38,11 +44,14 @@ static inline const char* getBTDefaultName()
 }
 
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
+#ifndef PVAL_MAX_ALREADY_DEFINED
+#undef PROPERTY_VALUE_MAX
+#endif
+
 #endif // OS_GENERIC
 
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
 #define BLE_VND_INCLUDED TRUE
-#undef PROPERTY_VALUE_MAX
 
 #endif
