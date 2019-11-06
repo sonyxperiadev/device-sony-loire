@@ -48,6 +48,12 @@ on boot
     # to one of the CPU from the default IRQ affinity mask.
     write /proc/irq/default_smp_affinity f
 
+    # MTP kernel parameters - needed so that swiotlb does not run OOM
+    chown system system /sys/module/usb_f_mtp/parameters/mtp_rx_req_len
+    chown system system /sys/module/usb_f_mtp/parameters/mtp_tx_req_len
+    write /sys/module/usb_f_mtp/parameters/mtp_rx_req_len 16384
+    write /sys/module/usb_f_mtp/parameters/mtp_tx_req_len 16384
+
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
