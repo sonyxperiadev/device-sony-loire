@@ -180,7 +180,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wifi.addr_path=/sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
+    ro.vendor.wifi.addr_path=/sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
