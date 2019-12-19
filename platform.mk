@@ -160,10 +160,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ## Avoid unsupported UBWC buffers on VENC
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.gralloc.gfx_ubwc_disable=1 \
-    debug.gralloc.gfx_ubwc_disable_=1 \
-    debug.gralloc.enable_fb_ubwc=0 \
-    video.disable.ubwc=1
+    vendor.gralloc.gfx_ubwc_disable=1 \
+    vendor.gralloc.enable_fb_ubwc=0 \
+    vendor.gralloc.disable_ubwc=1
 
 # Use MSM8956 feature set for vidc encoders
 PRODUCT_PROPERTY_OVERRIDES += \
