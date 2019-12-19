@@ -65,9 +65,6 @@ NXP_CHIP_FW_TYPE := PN547C2
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
-# Legacy Keymaster
-TARGET_LEGACY_KEYMASTER := true
-
 # Display
 TARGET_USES_GRALLOC1 := true
 
