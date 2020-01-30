@@ -74,6 +74,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/rqbalance_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/rqbalance_config.xml
 
+# Touch Screen firmware
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x90.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x90.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x91.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x91.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x92.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x92.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x93.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x93.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x94.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x94.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0xa0.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0xa0.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0xa1.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0xa1.img \
+    $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0xa2.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0xa2.img
+
 # Platform specific init
 PRODUCT_PACKAGES += \
     init.loire \
