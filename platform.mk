@@ -178,6 +178,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.msm8956hw=1
 
+# SurfaceFlinger
+# Keep in sync with NUM_FRAMEBUFFER_SURFACE_BUFFERS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Skip loading libsdmextension.so in display hal
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.skip_extension_intf=1
