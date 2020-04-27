@@ -73,6 +73,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/rqbalance_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/rqbalance_config.xml
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/sensors/sensors_settings:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensors_settings
+
 # Touch Screen firmware
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/firmware/touch_module_id_0x90.img:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/touch_module_id_0x90.img \
