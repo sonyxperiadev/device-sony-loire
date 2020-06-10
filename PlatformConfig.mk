@@ -12,12 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Platform path
-PLATFORM_COMMON_PATH := device/sony/loire
-PRODUCT_PLATFORM_SOD := true
-
-TARGET_BOARD_PLATFORM := msm8952
-
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -42,34 +36,8 @@ BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 
 TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.loire
 
-# Wi-Fi definitions for Broadcom solution but using brcmfmac instead of bcmdhd kernel driver
-BOARD_WLAN_DEVICE           := qcwcn
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-WPA_SUPPLICANT_VERSION      := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
-BOARD_HOSTAPD_DRIVER        := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_qcwcn
-
-# BT definitions for Broadcom solution
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_CUSTOM_BT_CONFIG := $(PLATFORM_COMMON_PATH)/bluetooth/vnd_generic.txt
-
-# TAD
-TARGET_USES_TAD_V2 := true
-
-# RIL
-TARGET_PER_MGR_ENABLED := true
-
-# NFC
-NXP_CHIP_FW_TYPE := PN547C2
-
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
-
-# Display
-TARGET_USES_GRALLOC1 := true
 
 # Cache partititon
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
