@@ -1,13 +1,18 @@
+Loire platform
+==============
 Copyright (C) Sony Mobile Communications 2016
-=============================================
+---------------------------------------------
 
-This is the Android device configuration for loire platform.
+Android device configuration for the loire platform (**MSM8956**).
 
-loire devices:
+### Supported devices
 
-    Xperia X.................Suzu
-    Xperia X Compact ........Kugo
-    Xperia Touch ............Blanc
+| Device | Codename |
+|-|:-:|
+| Xperia X | [suzu](https://github.com/sonyxperiadev/device-sony-suzu) |
+| Xperia X Compact | [kugo](https://github.com/sonyxperiadev/device-sony-kugo) |
+| Xperia Touch | [blanc](https://github.com/sonyxperiadev/device-sony-blanc) |
 
-Build instructions
+### Build instructions
+
 https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
